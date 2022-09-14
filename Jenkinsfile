@@ -24,12 +24,7 @@ pipeline {
             }
         }
 
-        // 执行单元测试
-        stage('Test') { 
-            steps {
-                sh 'dotnet test  --logger "console;verbosity=detailed"  --blame  --logger trx'
-            }
-        }
+
         
         // 正式发布
         stage('Publish') { 
